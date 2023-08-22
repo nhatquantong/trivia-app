@@ -14,7 +14,6 @@ struct MusicPlayerView: View {
         @State private var audioPlayer: AVAudioPlayer?
         
         var body: some View {
-            VStack {
                 Button(action: {
                     if isPlaying {
                         audioPlayer?.pause()
@@ -27,15 +26,16 @@ struct MusicPlayerView: View {
                     }
                     isPlaying.toggle()
                 }) {
-                    Text(isPlaying ? "Pause Music" : "Play Music")
-                        .padding()
-                        .foregroundColor(.white)
-                        .background(isPlaying ? Color.red : Color.green)
-                        .cornerRadius(10)
+                   
+                    Image(isPlaying ? "speaker" : "speaker-muted")
+                        .resizable()
+                        .frame(width: 45, height: 45) 
+                        
                 }
-            }
+                .frame(maxWidth: .infinity, alignment: .trailing) // Align the button to the right
+                .padding()
+                   
         }
-        
         private func playMusic() {
             guard let musicURL = Bundle.main.url(forResource: "y2mate.com - 뉴진스 Hype boy 벨소리 알람음 NewJeans Ringtone", withExtension: "mp3") else {
                 print("Music file not found")

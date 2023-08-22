@@ -17,6 +17,7 @@
 		4A718A602A9518AA004D7C9C /* y2mate.com - 뉴진스 Hype boy 벨소리 알람음 NewJeans Ringtone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4A718A5F2A9518AA004D7C9C /* y2mate.com - 뉴진스 Hype boy 벨소리 알람음 NewJeans Ringtone.mp3 */; };
 		4A718A6A2A951984004D7C9C /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A718A692A951984004D7C9C /* Music.swift */; };
 		4A718A6E2A951B9F004D7C9C /* MusicPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A718A6D2A951B9F004D7C9C /* MusicPlayerView.swift */; };
+		4A718A722A955EA3004D7C9C /* GUMDROP.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A718A702A955BD1004D7C9C /* GUMDROP.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -269,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A718A3C2A94FBC4004D7C9C /* Preview Assets.xcassets in Resources */,
+				4A718A722A955EA3004D7C9C /* GUMDROP.ttf in Resources */,
 				4A718A602A9518AA004D7C9C /* y2mate.com - 뉴진스 Hype boy 벨소리 알람음 NewJeans Ringtone.mp3 in Resources */,
 				4A718A392A94FBC4004D7C9C /* Assets.xcassets in Resources */,
 			);

@@ -14,10 +14,12 @@ struct ContentView: View {
                     Color("electric-blue")
                         .edgesIgnoringSafeArea(.all)
                     VStack(spacing: 25.0){
+                        MusicPlayerView()
                         Text("TRIVIA")
-                            .font(.custom("GUMDROP", size: 20))
+                            .font(.custom("GUMDROP", size: 90))
+                        Image("icon")
                         NavigationLink(destination: MusicPlayerView()) {
-                            Text("View My Stores")
+                            Text("New Game")
                                .frame(maxWidth: 250)}
                                 .padding()
                                 .foregroundColor(Color.black)
@@ -28,6 +30,7 @@ struct ContentView: View {
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 30)
                                     .stroke(Color.black, lineWidth: 5))
+                                .font(.custom("GUMDROP", size: 24))
                         NavigationLink(destination: MusicPlayerView()) {
                             Text("Leaderboard")
                                .frame(maxWidth: 250)}
@@ -40,6 +43,7 @@ struct ContentView: View {
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 30)
                                     .stroke(Color.black, lineWidth: 5))
+                                .font(.custom("GUMDROP", size: 24))
                         NavigationLink(destination: MusicPlayerView()) {
                             Text("How To Play")
                                .frame(maxWidth: 250)}
@@ -52,6 +56,7 @@ struct ContentView: View {
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 30)
                                     .stroke(Color.black, lineWidth: 5))
+                                .font(.custom("GUMDROP", size: 24))
                         NavigationLink(destination: MusicPlayerView()) {
                             Text("Settings")
                                .frame(maxWidth: 250)}
@@ -64,8 +69,10 @@ struct ContentView: View {
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 30)
                                     .stroke(Color.black, lineWidth: 5))
+                                .font(.custom("GUMDROP", size: 24))
                     }
-                    .padding(.top,200)
+                    .padding(.bottom,80)
+                    
                     
                 }
             }
