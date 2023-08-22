@@ -15,6 +15,7 @@ struct ContentView: View {
                         .edgesIgnoringSafeArea(.all)
                     VStack(spacing: 25.0){
                         Text("TRIVIA")
+                            .font(.custom("GUMDROP", size: 20))
                         NavigationLink(destination: MusicPlayerView()) {
                             Text("View My Stores")
                                .frame(maxWidth: 250)}

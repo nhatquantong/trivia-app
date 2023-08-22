@@ -82,9 +82,6 @@
 		4A718A282A94FBC3004D7C9C = {
 			isa = PBXGroup;
 			children = (
-				4A718A6F2A955BBB004D7C9C /* Fonts */,
-				4A718A612A9518C3004D7C9C /* Model */,
-				4A718A5E2A9517EF004D7C9C /* Music */,
 				4A718A332A94FBC3004D7C9C /* trivia-app */,
 				4A718A442A94FBC4004D7C9C /* trivia-appTests */,
 				4A718A4E2A94FBC4004D7C9C /* trivia-appUITests */,
@@ -105,6 +102,9 @@
 		4A718A332A94FBC3004D7C9C /* trivia-app */ = {
 			isa = PBXGroup;
 			children = (
+				4A718A6F2A955BBB004D7C9C /* Fonts */,
+				4A718A612A9518C3004D7C9C /* Model */,
+				4A718A5E2A9517EF004D7C9C /* Music */,
 				4A718A712A955C1A004D7C9C /* Info.plist */,
 				4A718A342A94FBC3004D7C9C /* trivia_appApp.swift */,
 				4A718A362A94FBC3004D7C9C /* ContentView.swift */,
