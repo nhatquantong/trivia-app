@@ -14,6 +14,9 @@
 		4A718A462A94FBC4004D7C9C /* trivia_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A718A452A94FBC4004D7C9C /* trivia_appTests.swift */; };
 		4A718A502A94FBC4004D7C9C /* trivia_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A718A4F2A94FBC4004D7C9C /* trivia_appUITests.swift */; };
 		4A718A522A94FBC4004D7C9C /* trivia_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A718A512A94FBC4004D7C9C /* trivia_appUITestsLaunchTests.swift */; };
+		4A718A602A9518AA004D7C9C /* y2mate.com - 뉴진스 Hype boy 벨소리 알람음 NewJeans Ringtone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4A718A5F2A9518AA004D7C9C /* y2mate.com - 뉴진스 Hype boy 벨소리 알람음 NewJeans Ringtone.mp3 */; };
+		4A718A6A2A951984004D7C9C /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A718A692A951984004D7C9C /* Music.swift */; };
+		4A718A6E2A951B9F004D7C9C /* MusicPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A718A6D2A951B9F004D7C9C /* MusicPlayerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4A718A312A94FBC3004D7C9C /* trivia-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "trivia-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A718A312A94FBC3004D7C9C /* Trivia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trivia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A718A342A94FBC3004D7C9C /* trivia_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trivia_appApp.swift; sourceTree = "<group>"; };
 		4A718A362A94FBC3004D7C9C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4A718A382A94FBC4004D7C9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -44,6 +47,11 @@
 		4A718A4B2A94FBC4004D7C9C /* trivia-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "trivia-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A718A4F2A94FBC4004D7C9C /* trivia_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trivia_appUITests.swift; sourceTree = "<group>"; };
 		4A718A512A94FBC4004D7C9C /* trivia_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trivia_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4A718A5F2A9518AA004D7C9C /* y2mate.com - 뉴진스 Hype boy 벨소리 알람음 NewJeans Ringtone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "y2mate.com - 뉴진스 Hype boy 벨소리 알람음 NewJeans Ringtone.mp3"; sourceTree = "<group>"; };
+		4A718A692A951984004D7C9C /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
+		4A718A6D2A951B9F004D7C9C /* MusicPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerView.swift; sourceTree = "<group>"; };
+		4A718A702A955BD1004D7C9C /* GUMDROP.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GUMDROP.ttf; sourceTree = "<group>"; };
+		4A718A712A955C1A004D7C9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +82,9 @@
 		4A718A282A94FBC3004D7C9C = {
 			isa = PBXGroup;
 			children = (
+				4A718A6F2A955BBB004D7C9C /* Fonts */,
+				4A718A612A9518C3004D7C9C /* Model */,
+				4A718A5E2A9517EF004D7C9C /* Music */,
 				4A718A332A94FBC3004D7C9C /* trivia-app */,
 				4A718A442A94FBC4004D7C9C /* trivia-appTests */,
 				4A718A4E2A94FBC4004D7C9C /* trivia-appUITests */,
@@ -84,7 +95,7 @@
 		4A718A322A94FBC3004D7C9C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4A718A312A94FBC3004D7C9C /* trivia-app.app */,
+				4A718A312A94FBC3004D7C9C /* Trivia.app */,
 				4A718A412A94FBC4004D7C9C /* trivia-appTests.xctest */,
 				4A718A4B2A94FBC4004D7C9C /* trivia-appUITests.xctest */,
 			);
@@ -94,10 +105,12 @@
 		4A718A332A94FBC3004D7C9C /* trivia-app */ = {
 			isa = PBXGroup;
 			children = (
+				4A718A712A955C1A004D7C9C /* Info.plist */,
 				4A718A342A94FBC3004D7C9C /* trivia_appApp.swift */,
 				4A718A362A94FBC3004D7C9C /* ContentView.swift */,
 				4A718A382A94FBC4004D7C9C /* Assets.xcassets */,
 				4A718A3A2A94FBC4004D7C9C /* Preview Content */,
+				4A718A6D2A951B9F004D7C9C /* MusicPlayerView.swift */,
 			);
 			path = "trivia-app";
 			sourceTree = "<group>";
@@ -127,6 +140,30 @@
 			path = "trivia-appUITests";
 			sourceTree = "<group>";
 		};
+		4A718A5E2A9517EF004D7C9C /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				4A718A5F2A9518AA004D7C9C /* y2mate.com - 뉴진스 Hype boy 벨소리 알람음 NewJeans Ringtone.mp3 */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
+		4A718A612A9518C3004D7C9C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4A718A692A951984004D7C9C /* Music.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4A718A6F2A955BBB004D7C9C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4A718A702A955BD1004D7C9C /* GUMDROP.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,7 +181,7 @@
 			);
 			name = "trivia-app";
 			productName = "trivia-app";
-			productReference = 4A718A312A94FBC3004D7C9C /* trivia-app.app */;
+			productReference = 4A718A312A94FBC3004D7C9C /* Trivia.app */;
 			productType = "com.apple.product-type.application";
 		};
 		4A718A402A94FBC4004D7C9C /* trivia-appTests */ = {
@@ -232,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A718A3C2A94FBC4004D7C9C /* Preview Assets.xcassets in Resources */,
+				4A718A602A9518AA004D7C9C /* y2mate.com - 뉴진스 Hype boy 벨소리 알람음 NewJeans Ringtone.mp3 in Resources */,
 				4A718A392A94FBC4004D7C9C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,7 +296,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A718A372A94FBC3004D7C9C /* ContentView.swift in Sources */,
+				4A718A6E2A951B9F004D7C9C /* MusicPlayerView.swift in Sources */,
 				4A718A352A94FBC3004D7C9C /* trivia_appApp.swift in Sources */,
+				4A718A6A2A951984004D7C9C /* Music.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +459,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"trivia-app/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "trivia-app/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -430,7 +471,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "s3819347.asm2.trivia-app";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Trivia;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -447,6 +488,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"trivia-app/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "trivia-app/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -458,7 +500,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "s3819347.asm2.trivia-app";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Trivia;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
