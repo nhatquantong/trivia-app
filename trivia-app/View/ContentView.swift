@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var triviaManager = TriviaManager()
     var body: some View {
             NavigationStack{
                 ZStack{
@@ -16,21 +17,28 @@ struct ContentView: View {
                     VStack(spacing: 25.0){
                         MusicPlayerView()
                         Text("TRIVIA")
-                            .font(.custom("GUMDROP", size: 90))
+                            .font(.custom("GUMDROP", size: 110))
                         Image("icon")
-                        NavigationLink(destination: MusicPlayerView()) {
-                            Text("New Game")
-                               .frame(maxWidth: 250)}
-                                .padding()
-                                .foregroundColor(Color.black)
-                                .background(
-                                           RoundedRectangle(cornerRadius: 30)
-                                               .fill(Color("blue")) // Set your desired background color here
-                                       )
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 30)
-                                    .stroke(Color.black, lineWidth: 5))
-                                .font(.custom("GUMDROP", size: 24))
+//                        NavigationLink(destination: TriviaView(triviaManager: triviaManager)) {
+//                            Text("New Game")
+//                               .frame(maxWidth: 250)}
+//                                .padding()
+//                                .foregroundColor(Color.black)
+//                                .background(
+//                                           RoundedRectangle(cornerRadius: 30)
+//                                               .fill(Color("blue")) // Set your desired background color here
+//                                       )
+//                                .overlay(
+//                                    RoundedRectangle(cornerRadius: 30)
+//                                    .stroke(Color.black, lineWidth: 5))
+//                                .font(.custom("GUMDROP", size: 24))
+                        NavigationLink {
+                            TriviaView()
+                                .environmentObject(triviaManager)
+                                
+                        } label: {
+                            PrimaryButton(text: "Let's go!")
+                        }
                         NavigationLink(destination: MusicPlayerView()) {
                             Text("Leaderboard")
                                .frame(maxWidth: 250)}
