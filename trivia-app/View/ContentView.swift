@@ -19,8 +19,27 @@ struct ContentView: View {
                         Text("TRIVIA")
                             .font(.custom("GUMDROP", size: 110))
                         Image("icon")
-//                        NavigationLink(destination: TriviaView(triviaManager: triviaManager)) {
-//                            Text("New Game")
+                        NavigationLink {
+                            TriviaView()
+                                .environmentObject(triviaManager)
+                                
+                        } label: {
+                            Text("New Game")
+                                                          .frame(maxWidth: 250)
+                                                           .padding()
+                                                           .foregroundColor(Color.black)
+                                                           .background(
+                                                                      RoundedRectangle(cornerRadius: 30)
+                                                                          .fill(Color("blue")) // Set your desired background color here
+                                                                  )
+                                                           .overlay(
+                                                               RoundedRectangle(cornerRadius: 30)
+                                                               .stroke(Color.black, lineWidth: 5))
+                                                           .font(.custom("GUMDROP", size: 24))
+                                
+                        }
+//                        NavigationLink(destination: MusicPlayerView()) {
+//                            Text("Leaderboard")
 //                               .frame(maxWidth: 250)}
 //                                .padding()
 //                                .foregroundColor(Color.black)
@@ -32,15 +51,8 @@ struct ContentView: View {
 //                                    RoundedRectangle(cornerRadius: 30)
 //                                    .stroke(Color.black, lineWidth: 5))
 //                                .font(.custom("GUMDROP", size: 24))
-                        NavigationLink {
-                            TriviaView()
-                                .environmentObject(triviaManager)
-                                
-                        } label: {
-                            PrimaryButton(text: "Let's go!")
-                        }
-                        NavigationLink(destination: MusicPlayerView()) {
-                            Text("Leaderboard")
+                        NavigationLink(destination: NameView()) {
+                            Text("Name Test")
                                .frame(maxWidth: 250)}
                                 .padding()
                                 .foregroundColor(Color.black)

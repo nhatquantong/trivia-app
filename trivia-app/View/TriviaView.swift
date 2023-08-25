@@ -1,8 +1,8 @@
 //
 //  TriviaView.swift
-//  TriviaGame
+//  trivia-app
 //
-//  Created by Stephanie Diep on 2021-12-17.
+//  Created by Nhật Quân on 22/08/2023.
 //
 
 import SwiftUI
@@ -30,10 +30,10 @@ struct TriviaView: View {
                     PrimaryButton(text: "Play again")
                 }
             }
-            .foregroundColor(Color("AccentColor"))
+            .navigationBarBackButtonHidden(true)
             .padding()
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color(red: 0.984313725490196, green: 0.9294117647058824, blue: 0.8470588235294118))
+            .background(Color("electric-blue"))
         } else {
             QuestionView()
                 .environmentObject(triviaManager)

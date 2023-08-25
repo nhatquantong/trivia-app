@@ -1,8 +1,8 @@
 //
 //  QuestionView.swift
-//  TriviaGame
+//  trivia-app
 //
-//  Created by Stephanie Diep on 2021-12-17.
+//  Created by Nhật Quân on 22/08/2023.
 //
 
 import SwiftUI
@@ -19,7 +19,7 @@ struct QuestionView: View {
                 Spacer()
                 
                 Text("\(triviaManager.index + 1) out of \(triviaManager.length)")
-                    .foregroundColor(Color("AccentColor"))
+                    .foregroundColor(.black)
                     .fontWeight(.heavy)
             }
             
@@ -29,7 +29,7 @@ struct QuestionView: View {
                 Text(triviaManager.question)
                     .font(.system(size: 20))
                     .bold()
-                    .foregroundColor(.gray)
+                    .foregroundColor(.black)
                 
                 ForEach(triviaManager.answerChoices, id: \.id) { answer in
                     AnswerRow(answer: answer)
@@ -48,7 +48,7 @@ struct QuestionView: View {
         }
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-        .background(Color(red: 0.984313725490196, green: 0.9294117647058824, blue: 0.8470588235294118))
+        .background(Color("electric-blue"))
         .navigationBarHidden(true)
     }
 }
