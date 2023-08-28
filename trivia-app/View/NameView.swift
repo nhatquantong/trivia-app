@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct NameView: View {
-    @State private var textFieldContent = ""
+    @State var textFieldContent = ""
     @StateObject var triviaManager = TriviaManager()
+    
+    
     var body: some View {
         NavigationStack{
             ZStack{
@@ -19,27 +21,37 @@ struct NameView: View {
                     TextField("User name", text: $textFieldContent)
                         .textContentType(.givenName)
                         .multilineTextAlignment(.center)
-                        .padding(.bottom, 100)
-                    NavigationLink {
-                        TriviaView()
-                            .environmentObject(triviaManager)
-                            
-                    } label: {
-                        Text("New Game")
-                                                      .frame(maxWidth: 250)
-                                                       .padding()
-                                                       .foregroundColor(Color.black)
-                                                       .background(
-                                                                  RoundedRectangle(cornerRadius: 30)
-                                                                      .fill(Color("blue")) // Set your desired background color here
-                                                              )
-                                                       .overlay(
-                                                           RoundedRectangle(cornerRadius: 30)
-                                                           .stroke(Color.black, lineWidth: 5))
-                                                       .font(.custom("GUMDROP", size: 24))
+                        .frame(maxWidth: 300)
+                         .padding()
+                         .foregroundColor(Color.black)
+                         .background(
+                                    RoundedRectangle(cornerRadius: 30)
+                                        .fill(.white) // Set your desired background color here
+                                )
+                         .overlay(
+                             RoundedRectangle(cornerRadius: 30)
+                             .stroke(Color.black, lineWidth: 5))
+                         .font(.custom("GUMDROP", size: 24))
+                         .padding(.bottom,100)
+                    NavigationLink(destination: TriviaView()
+                                                .environmentObject(triviaManager)) {
+                        Text("Start the game")
+                           .frame(maxWidth: 250)
+                           .padding()
+                           .foregroundColor(Color.black)
+                           .background(
+                                 RoundedRectangle(cornerRadius: 30)
+                                     .fill(Color("blue")))
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 30)
+                                           .stroke(Color.black, lineWidth: 5))
+                            .font(.custom("GUMDROP", size: 24))
                     }
+                    .onTapGesture {
+                        triviaManager.updateUserName(textFieldContent)  // Update the user's name in TriviaManager
+                    }
+               
                 }
-                
             }
             
         }

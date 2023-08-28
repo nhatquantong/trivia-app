@@ -2,7 +2,7 @@
 //  PrimaryButton.swift
 //  TriviaGame
 //
-//  Created by Stephanie Diep on 2021-12-17.
+//  Created by Nhật Quân on 22/08/2023.
 //
 
 import SwiftUI

@@ -1,8 +1,8 @@
 //
 //  TriviaManager.swift
-//  TriviaGame
+//  trivia-app
 //
-//  Created by Stephanie Diep on 2021-12-17.
+//  Created by Nhật Quân on 22/08/2023.
 //
 
 import Foundation
@@ -12,6 +12,7 @@ class TriviaManager: ObservableObject {
     // Variables to set trivia and length of trivia
     private(set) var trivia: [Trivia.Result] = []
     @Published private(set) var length = 0
+    @Published var userName = ""
     
     // Variables to set question and answers
     @Published private(set) var index = 0
@@ -35,7 +36,7 @@ class TriviaManager: ObservableObject {
     
     // Asynchronous HTTP request to get the trivia questions and answers
     func fetchTrivia() async {
-        guard let url = URL(string: "https://opentdb.com/api.php?amount=5&category=21&difficulty=easy&type=multiple") else { fatalError("Missing URL") }
+        guard let url = URL(string: "https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple") else { fatalError("Missing URL") }
         
         let urlRequest = URLRequest(url: url)
         
@@ -65,7 +66,65 @@ class TriviaManager: ObservableObject {
             print("Error fetching trivia: \(error)")
         }
     }
-    
+    func fetchTriviaMedium() async {
+        guard let url = URL(string: "https://opentdb.com/api.php?amount=5&category=9&difficulty=medium&type=multiple") else { fatalError("Missing URL") }
+        
+        let urlRequest = URLRequest(url: url)
+        
+        do {
+            let (data, response) = try await URLSession.shared.data(for: urlRequest)
+            
+            guard (response as? HTTPURLResponse)?.statusCode == 200 else { fatalError("Error while fetching data") }
+
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            let decodedData = try decoder.decode(Trivia.self, from: data)
+
+            DispatchQueue.main.async {
+                self.index = 0
+                self.score = 0
+                self.progress = 0.00
+                self.reachedEnd = false
+
+                self.trivia = decodedData.results
+                self.length = self.trivia.count
+                self.setQuestion()
+            }
+        } catch {
+            print("Error fetching trivia: \(error)")
+        }
+    }
+    func fetchTriviaHard() async {
+        guard let url = URL(string: "https://opentdb.com/api.php?amount=5&category=9&difficulty=easy&type=multiple") else { fatalError("Missing URL") }
+        
+        let urlRequest = URLRequest(url: url)
+        
+        do {
+            let (data, response) = try await URLSession.shared.data(for: urlRequest)
+            
+            guard (response as? HTTPURLResponse)?.statusCode == 200 else { fatalError("Error while fetching data") }
+
+            let decoder = JSONDecoder()
+            // Line below allows us to convert the correct_answer key from the API into the correctAnswer in our Trivia model, without running into an error from the JSONDecoder that it couldn't find a matching codingKey
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            let decodedData = try decoder.decode(Trivia.self, from: data)
+
+            DispatchQueue.main.async {
+                // Reset variables before assigning new values, for when the user plays the game another time
+                self.index = 0
+                self.score = 0
+                self.progress = 0.00
+                self.reachedEnd = false
+
+                // Set new values for all variables
+                self.trivia = decodedData.results
+                self.length = self.trivia.count
+                self.setQuestion()
+            }
+        } catch {
+            print("Error fetching trivia: \(error)")
+        }
+    }
     // Function to go to next question. If reached end of the trivia, set reachedEnd to true
     func goToNextQuestion() {
         // If didn't reach end of array, increment index and set next question
@@ -90,6 +149,9 @@ class TriviaManager: ObservableObject {
             answerChoices = currentTriviaQuestion.answers
         }
     }
+    func updateUserName(_ name: String) {
+            userName = name
+        }
     
     // Function to know that user selected an answer, and update the score
     func selectAnswer(answer: Answer) {

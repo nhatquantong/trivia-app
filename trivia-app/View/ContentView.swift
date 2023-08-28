@@ -20,7 +20,7 @@ struct ContentView: View {
                             .font(.custom("GUMDROP", size: 110))
                         Image("icon")
                         NavigationLink {
-                            TriviaView()
+                            NameView()
                                 .environmentObject(triviaManager)
                                 
                         } label: {
@@ -52,7 +52,7 @@ struct ContentView: View {
 //                                    .stroke(Color.black, lineWidth: 5))
 //                                .font(.custom("GUMDROP", size: 24))
                         NavigationLink(destination: NameView()) {
-                            Text("Name Test")
+                            Text("Leaderboard")
                                .frame(maxWidth: 250)}
                                 .padding()
                                 .foregroundColor(Color.black)
@@ -77,7 +77,7 @@ struct ContentView: View {
                                     RoundedRectangle(cornerRadius: 30)
                                     .stroke(Color.black, lineWidth: 5))
                                 .font(.custom("GUMDROP", size: 24))
-                        NavigationLink(destination: MusicPlayerView()) {
+                        NavigationLink(destination: SettingView()) {
                             Text("Settings")
                                .frame(maxWidth: 250)}
                                 .padding()

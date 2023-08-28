@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct trivia_appApp: App {
+    @StateObject private var triviaManager = TriviaManager()
     var body: some Scene {
         WindowGroup {
            ContentView()
+                .environmentObject(triviaManager)
         }
     }
 }

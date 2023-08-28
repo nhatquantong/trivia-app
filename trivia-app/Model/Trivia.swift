@@ -1,6 +1,6 @@
 //
 //  Trivia.swift
-//  TriviaGame
+//  trivia-app
 //
 //  Created by Stephanie Diep on 2021-12-20.
 //
@@ -55,4 +55,5 @@ struct Trivia: Decodable {
             }
         }
     }
+    
 }

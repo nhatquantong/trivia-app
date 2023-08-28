@@ -13,7 +13,7 @@ struct TriviaView: View {
     var body: some View {
         if triviaManager.reachedEnd {
             VStack(spacing: 20) {
-                Text("Trivia Game")
+                Text("Welcome, \(triviaManager.userName)")
                     .lilacTitle()
 
                 Text("Congratulations, you completed the game! 🥳")

@@ -10,10 +10,11 @@ import SwiftUI
 struct QuestionView: View {
     @EnvironmentObject var triviaManager: TriviaManager
 
+
     var body: some View {
         VStack(spacing: 40) {
             HStack {
-                Text("Trivia Game")
+                Text("Welcome, \(triviaManager.userName)")
                     .lilacTitle()
                 
                 Spacer()
