@@ -27,6 +27,10 @@
 		4A718A6A2A951984004D7C9C /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A718A692A951984004D7C9C /* Music.swift */; };
 		4A718A6E2A951B9F004D7C9C /* MusicPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A718A6D2A951B9F004D7C9C /* MusicPlayerView.swift */; };
 		4A718A722A955EA3004D7C9C /* GUMDROP.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A718A702A955BD1004D7C9C /* GUMDROP.ttf */; };
+		F47824902A988D8E00C67E85 /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F478248F2A988D8E00C67E85 /* NameView.swift */; };
+		F47824922A98913300C67E85 /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47824912A98913300C67E85 /* LeaderboardView.swift */; };
+		F47824942A98913F00C67E85 /* InstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47824932A98913F00C67E85 /* InstructionView.swift */; };
+		F47824962A98914800C67E85 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47824952A98914800C67E85 /* SettingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +75,11 @@
 		4A718A6D2A951B9F004D7C9C /* MusicPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerView.swift; sourceTree = "<group>"; };
 		4A718A702A955BD1004D7C9C /* GUMDROP.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GUMDROP.ttf; sourceTree = "<group>"; };
 		4A718A712A955C1A004D7C9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F478248F2A988D8E00C67E85 /* NameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameView.swift; sourceTree = "<group>"; };
+		F47824912A98913300C67E85 /* LeaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
+		F47824932A98913F00C67E85 /* InstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionView.swift; sourceTree = "<group>"; };
+		F47824952A98914800C67E85 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		F47824992A989F1800C67E85 /* Notes.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Notes.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +113,10 @@
 				4A6E10632A97B46900B186FD /* QuestionView.swift */,
 				4A6E10622A97B46900B186FD /* TriviaView.swift */,
 				4A718A362A94FBC3004D7C9C /* ContentView.swift */,
+				F478248F2A988D8E00C67E85 /* NameView.swift */,
+				F47824912A98913300C67E85 /* LeaderboardView.swift */,
+				F47824932A98913F00C67E85 /* InstructionView.swift */,
+				F47824952A98914800C67E85 /* SettingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -153,6 +166,7 @@
 				4A718A382A94FBC4004D7C9C /* Assets.xcassets */,
 				4A718A3A2A94FBC4004D7C9C /* Preview Content */,
 				4A718A6D2A951B9F004D7C9C /* MusicPlayerView.swift */,
+				F47824992A989F1800C67E85 /* Notes.md */,
 			);
 			path = "trivia-app";
 			sourceTree = "<group>";
@@ -349,8 +363,12 @@
 				4A6E10702A97B53600B186FD /* PrimaryButton.swift in Sources */,
 				4A6E10642A97B46900B186FD /* TriviaView.swift in Sources */,
 				4A6E106A2A97B4C300B186FD /* ContentView.swift in Sources */,
+				F47824962A98914800C67E85 /* SettingView.swift in Sources */,
+				F47824902A988D8E00C67E85 /* NameView.swift in Sources */,
+				F47824922A98913300C67E85 /* LeaderboardView.swift in Sources */,
 				4A6E105E2A97B43600B186FD /* Answer.swift in Sources */,
 				4A6E10712A97B53600B186FD /* ProgressBar.swift in Sources */,
+				F47824942A98913F00C67E85 /* InstructionView.swift in Sources */,
 				4A718A352A94FBC3004D7C9C /* trivia_appApp.swift in Sources */,
 				4A718A6A2A951984004D7C9C /* Music.swift in Sources */,
 			);
